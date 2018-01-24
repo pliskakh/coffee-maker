@@ -1,0 +1,31 @@
+.ba-intro{
+  padding: 203px 0 120px;
+  background: $secondary-color;
+  color: $white;
+}
+
+.ba-header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.ba-logo{
+  height: 76px;
+  display: inline-block;
+}
+
+.ba-main{
+  &-menu{
+    a{
+      color: $white;
+      text-transform: uppercase;
+      font: 400 13px/1 $header-font-family;
+      &:hover, &:focus{
+        color: $primary-color;
+      }
+    }
+  }
+}
