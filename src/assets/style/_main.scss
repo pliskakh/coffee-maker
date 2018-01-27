@@ -1,31 +1,33 @@
 .ba-intro{
   padding: 203px 0 120px;
-  background: $secondary-color;
+
+  background: $secondary-color no-repeat;
+  background-image: url('../img/mask-top.png'),
+  url('../img/intro-bg.jpg');
+  background-position: 50% 102%, 50% 100%;
+  background-size: contain, cover;
+
   color: $white;
+
 }
 
-.ba-header{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 9;
-}
-
-.ba-logo{
-  height: 76px;
-  display: inline-block;
-}
-
-.ba-main{
-  &-menu{
-    a{
-      color: $white;
-      text-transform: uppercase;
-      font: 400 13px/1 $header-font-family;
-      &:hover, &:focus{
-        color: $primary-color;
-      }
-    }
+.ba-section{
+  padding: 100px 0;
+  &__content{
+    text-align: center;
   }
 }
+
+
+.ba-section-title{
+  font: 400 50px/1.2 $header-font-family-2;
+  text-align: center;
+  color: #000;
+
+}
+
+
+.ba-bg-pattern{
+  background: #ececec url('../img/bg-patter.jpg');
+}
+

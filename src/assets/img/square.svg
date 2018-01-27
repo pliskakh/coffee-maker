@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68.5" height="68.5" viewBox="0 0 68.5 68.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #eab96a;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <rect id="square.svg" class="cls-1" x="0.5" y="0.5" width="67.5" height="67.5"/>
+</svg>

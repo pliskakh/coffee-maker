@@ -15,57 +15,145 @@
 		<![endif]-->
 	</head>
 	<body>
-		<header class="ba-header">
-				<div class="top-bar">
-					<div class="top-bar-title">
-						<a class="ba-logo" href="index.html">
-							<img src="assets/img/logo.png" alt="CoffeeMaker">
-						</a>
-					</div>
-					<span class="float-right" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-						<button class="menu-icon dark" type="button" data-toggle></button>
-					</span>
-					<div id="responsive-menu">
-						<div class="top-bar-right">
-							<ul class="ba-main-menu menu vertical medium-horizontal">
-								<li class="active"><a href="#program">program</a></li>
-								<li><a href="#gallery">gallery</a></li>
-								<li><a href="#reviews">reviews</a></li>
-								<li><a href="#partners">partners</a></li>
-								<li><a href="#contact">contact</a></li>
+
+			<div class="off-canvas-wrapper">
+					<div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+			
+							<!-- Close button -->
+							<button class="close-button" aria-label="Close menu" type="button" data-close>
+								<span aria-hidden="true">&times;</span>
+							</button>
+						
+							<!-- Menu -->
+							<ul class="vertical menu">
+								<li>
+									<a href="#">Foundation</a>
+								</li>
+								<li>
+									<a href="#">Dot</a>
+								</li>
+								<li>
+									<a href="#">ZURB</a>
+								</li>
+								<li>
+									<a href="#">Com</a>
+								</li>
+								<li>
+									<a href="#">Slash</a>
+								</li>
+								<li>
+									<a href="#">Sites</a>
+								</li>
 							</ul>
-							<a class="ba-top-tel" href="tel:+380996611730">+38 (099) 66-11-730</a>
+						
 						</div>
-					</div>
-				</div>
-		</header>
-		
+						
+						<div class="off-canvas-content" data-off-canvas-content>
+							<!-- Your page content lives here -->
+							<header class="ba-header">
+								<div class="top-bar ba-top-bar">
+									<div class="top-bar-title">
+										<a class="ba-logo" href="index.html">
+											<img src="assets/img/logo.png" alt="CoffeeMaker">
+										</a>
+									</div>
+							
+							
+									<nav class="show-for-large">
+										<ul class="ba-main-menu menu vertical medium-horizontal">
+											<li class="active">
+												<a href="#program">program</a>
+											</li>
+											<li>
+												<a href="#gallery">gallery</a>
+											</li>
+											<li>
+												<a href="#reviews">reviews</a>
+											</li>
+											<li>
+												<a href="#partners">partners</a>
+											</li>
+											<li>
+												<a href="#contact">contact</a>
+											</li>
+										</ul>
+									</nav>
+							
+									<a class="ba-top-tel" href="tel:+380996611730">+38 (099) 66-11-730</a>
+							
+									<button class="menu-icon hide-for-large" type="button" data-toggle="offCanvas"></button>
+							
+								</div>
+							</header>
+			
+							<main>
+								<section class="ba-intro text-center">
+									<div class="row column">
+										<h3 class="ba-suptitle">
+												Intensive program barista training
+										</h3>
+										<h1 class="ba-title">
+												Barista Training in <span>amsterdam</span>
+										</h1>
+										<p>
+												On the basis of the company's largest coffee roasters
+										</p>
+									</div>
+									<!-- /.row column -->
+								</section>
+								<!-- /.ba-intro -->
 
-		<main>
-			<section class="ba-intro text-center">
-				<div class="row column">
-					<h3 class="ba-suptitle">
-							Intensive program barista training
-					</h3>
-					<h1 class="ba-title">
-							Barista Training in <span>amsterdam</span>
-					</h1>
-					<p>
-							On the basis of the company's largest coffee roasters
-					</p>
-				</div>
-				<!-- /.row column -->
-			</section>
-			<!-- /.ba-intro -->
-		</main>
+								<section class="ba-section ba-bg-pattern">
+									<div class="row column">
+										<h2 class="ba-section-title">Programs</h2>
+										<div class="ba-section__content">
+											<p>We share their experience and professional barista championships multiple winners</p>
+										</div>
+										<!-- / .ba-section__content -->
 
-		<footer class="ba-footer">
-			<div class="row column">
-		
+										<ul class="tabs" data-tabs id="programs-tabs">
+											<li class="tabs-title is-active">
+												<a href="#programm-basic" aria-selected="true">Basic</a>
+											</li>
+											<li class="tabs-title">
+												<a href="#programm-premium">Premium</a>
+											</li>
+											<li class="tabs-title">
+												<a href="#programm-platinum">Platinum</a>
+											</li>
+										</ul>
+
+										<div class="tabs-content" data-tabs-content="programs-tabs">
+											<div class="tabs-panel is-active" id="programm-basic">
+												<p>1 Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+											</div>
+											<div class="tabs-panel" id="programm-premium">
+												<p>2 Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+											</div>
+											<div class="tabs-panel" id="programm-platinum">
+												<p>3 Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+											</div>
+										</div>
+
+									</div>
+									<!-- /.row column -->
+								</section>
+
+
+							</main>
+												<footer class="ba-footer">
+													<div class="row column">
+												
+													</div>
+												</footer>
+												
+			
+						</div>
 			</div>
-		</footer>
-		
+			<!-- /.off-canvas-wrapper -->
+			
 		<script src="assets/js/app.js"></script>
+			
 		
 	</body>
 </html>

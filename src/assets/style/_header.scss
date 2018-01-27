@@ -1,0 +1,92 @@
+.ba-header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.ba-logo{
+  height: 76px;
+  display: inline-block;
+  position: relative;
+  padding: 0 8px;
+
+  @include breakpoint(medium){
+    padding: 0 16px;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: #7a7777;
+    top: 100%;
+  }
+  &:before{
+    right: 100%;
+    width: 100px;
+  }
+  &:after{
+    left: 100%;
+    width: 100vw;
+  }
+
+}
+
+.ba-main{
+  &-menu{
+    a{
+      color: $white;
+      text-transform: uppercase;
+      font: 400 13px/1 $header-font-family;
+      &:hover, &:focus{
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.ba-top-bar{
+  display: flex;
+  align-items: center;
+  @include breakpoint(medium down){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.top-bar-title{
+  flex-grow: 1;
+  padding-top: 10px;
+  @include breakpoint(large){
+    padding-top: 22px;
+  }
+}
+
+.ba-main-menu{
+  white-space: nowrap;
+}
+
+.ba-top-tel{
+  font: 400 16px/1 $header-font-family;
+  color: $white;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+
+  margin-left: 30px;
+
+  @include breakpoint(medium down){
+    margin-right: 20px;
+  }
+
+  @include breakpoint(medium){
+    font-size: 24px;
+  }
+  @include breakpoint(large){
+    font-size: 27px;
+  }
+  @include breakpoint(xlarge){
+    margin-left: 100px;
+  }
+}

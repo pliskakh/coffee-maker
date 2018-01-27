@@ -21,12 +21,12 @@
 // require foundation.equalizer.min.js"
 // require foundation.interchange.min.js"
 // require foundation.magellan.min.js"
-// require foundation.offcanvas.min.js"
+//=require foundation.offcanvas.min.js
 // require foundation.orbit.min.js"
 // require foundation.reveal.min.js"
 // require foundation.slider.min.js"
 // require foundation.sticky.min.js"
-// require foundation.tabs.min.js"
+//=require foundation.tabs.min.js
 // require foundation.tooltip.min.js"
 // require foundation.zf.responsiveAccordionTabs.min.js"
 

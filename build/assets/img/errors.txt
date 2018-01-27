@@ -1,0 +1,4 @@
+[2018-01-24 20:58:40] layer "hello@.com": Unsupported extension: com
+[2018-01-24 20:58:40] layer "+38 000 000 000": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-01-24 20:58:40] layer "site template by  NIKANDROV.PRO": Unsupported extension: pro
+[2018-01-24 20:58:40] layer "+38 (099) 66-11-730": Expected Either a default asset specification or a layer asset specification but "+" found.
