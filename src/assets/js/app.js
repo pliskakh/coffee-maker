@@ -18,7 +18,7 @@
 // require foundation.accordionMenu.min.js"
 // require foundation.drilldown.min.js"
 // require foundation.dropdownMenu.min.js"
-// require foundation.equalizer.min.js"
+//=require foundation.equalizer.min.js
 // require foundation.interchange.min.js"
 // require foundation.magellan.min.js"
 //=require foundation.offcanvas.min.js
@@ -31,37 +31,36 @@
 // require foundation.zf.responsiveAccordionTabs.min.js"
 
 //=require slick.min.js
+//=require rellax.min.js
 
 
 ;(function($){
 	$(document).foundation();
 
-	$(document).ready(function(){
-		//var $slider = $('.ba-slider');
+	var rellax = new Rellax('.ba-rellax');
 
-		// $slider.slick({
-		// 	dots: true,
-		// 	infinite: false
-		// });
+	$(document).ready(function(){
+		var $slider = $('.ba-gallery');
+
+		$slider.slick({
+			dots: false,
+			infinite: true,
+			centerMode: true,
+			centerPadding: '160px',
+			focusOnSelect: true,
+			variableWidth: true,
+				responsive:[
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow :1,
+							centerMode: true,
+							variableWidth: false,
+							centerPadding: '50px'
+						}
+					}
+				]
+		});
 	});
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -109,7 +109,7 @@ $header-font-family-2: 'Intro Rust','Helvetica Neue', Helvetica, Roboto, Arial, 
 $header-font-weight: 400;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $black;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (

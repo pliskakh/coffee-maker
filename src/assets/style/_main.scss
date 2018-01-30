@@ -12,9 +12,18 @@
 }
 
 .ba-section{
+  position: relative;
+
   padding: 100px 0;
   &__content{
     text-align: center;
+  }
+  &--dark{
+    background-color: $secondary-color;
+    color: $white;
+    h1,h2,h3,h4,h5,h6{
+      color: inherit;
+    }
   }
 }
 
@@ -31,3 +40,71 @@
   background: #ececec url('../img/bg-patter.jpg');
 }
 
+.ba-course-columns{
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ba-course-desc{
+  @include breakpoint(large){
+    flex: 0 1 340px;
+  }
+  &__title{
+    border-top: 1px solid #939393;
+    padding-top: 16px;
+    margin-bottom: 30px;
+    font-size: 17px;
+
+    display: flex;
+    align-items: flex-end;
+
+  }
+}
+
+.ba-gallery{
+  &__slide{
+      margin: 0 10px;
+      @include breakpoint(medium){
+        margin: 0 25px;
+      }
+    filter: grayscale(1);
+    transition: filter .3s;
+    &:hover{
+      filter: grayscale(0.5)
+    }
+    &.slick-center{
+      filter: grayscale(0);
+    }
+  }
+}
+
+.ba-bean{
+  position: absolute;
+  z-index: 2;
+  background: transparent 50% no-repeat / contain;
+  pointer-events: none;
+  
+  &--top-r{
+    background-image: url('../img/bean1.png');
+    width: 239px;
+    height: 246px;
+
+    top: -200px;
+    right: 102px;
+  }
+  &--top-l{
+    background-image: url('../img/bean5.png');
+    width: 134px;
+    height: 207px;
+
+    top: 200px;
+    left: -20px;
+  }
+  &--mid-r{
+    top: 50%;
+    right: 0;
+    background-image: url('../img/coffebean2.png');
+    width: 107px;
+    height: 233px;
+  }
+}
