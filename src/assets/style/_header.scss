@@ -4,16 +4,35 @@
   right: 0;
   left: 0;
   z-index: 9;
+  transition: background-color .3s ease;
+  &.ba-stick{
+    background-color: rgba($secondary-color, 0.9);
+    .ba-logo{
+      height: 56px;
+      img{
+        transform: translateY(-52px);
+      }
+      &:before, &:after{
+        transform: scaleX(2);
+      }
+    }
+  }
 }
 
 .ba-logo{
   height: 76px;
-  display: inline-block;
+  display: block;
+  float: left;
   position: relative;
   padding: 0 8px;
+  transition: height .3s ease;
 
   @include breakpoint(medium){
     padding: 0 16px;
+  }
+
+  img{
+    transition: transform .3s ease;
   }
   
   &:before, &:after{
@@ -22,6 +41,8 @@
     height: 1px;
     background: #7a7777;
     top: 100%;
+
+    transition: transform .3s ease;
   }
   &:before{
     right: 100%;
@@ -35,13 +56,30 @@
 }
 
 .ba-main{
-  &-menu{
+  &-nav{
+    align-self: stretch;
+    display: flex;
+  }
+  &-menu.menu{
+      display: flex;
+      white-space: nowrap;
+      li{
+        display: flex;
+        margin-bottom: -1px;
+      }
     a{
       color: $white;
       text-transform: uppercase;
       font: 400 13px/1 $header-font-family;
+      display: flex;
+      align-items: center;
       &:hover, &:focus{
         color: $primary-color;
+      }
+    }
+    .active{
+      a{
+        border-bottom: 1px solid $primary-color; 
       }
     }
   }

@@ -25,6 +25,23 @@
       color: inherit;
     }
   }
+
+  &--parallax{
+    overflow: hidden;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        height: 200px;
+        pointer-events:none;
+        background: url(../img/mask-top.png) no-repeat 50% 105% / contain;
+        transform: rotate(180deg);
+    }
+}
+
 }
 
 
@@ -107,4 +124,26 @@
     width: 107px;
     height: 233px;
   }
+}
+
+.ba-gallery-count{
+  display: flex;
+  justify-content: center;
+  &__current, &__total{
+    padding: 0 15px;
+  }
+  button{
+    color: $white;
+  }
+}
+
+.ba-bg-parallax{
+  position: absolute;
+  pointer-events: none;
+  top: -20%;
+  left: 0;
+  height: 140%;
+  width: 100%;
+  z-index: 0;
+  background: 50% no-repeat / cover;
 }

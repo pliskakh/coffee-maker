@@ -34,33 +34,63 @@
 //=require rellax.min.js
 
 
-;(function($){
+;
+(function ($) {
 	$(document).foundation();
 
 	var rellax = new Rellax('.ba-rellax');
 
-	$(document).ready(function(){
+	$(document).ready(function () {
 		var $slider = $('.ba-gallery');
 
 		$slider.slick({
+			slide: '.ba-gallery__slide',
 			dots: false,
 			infinite: true,
 			centerMode: true,
-			centerPadding: '160px',
+			centerPadding: '100px',
 			focusOnSelect: true,
 			variableWidth: true,
-				responsive:[
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow :1,
-							centerMode: true,
-							variableWidth: false,
-							centerPadding: '50px'
-						}
-					}
-				]
+			nextArrow: '.ba-gallery-next',
+			prevArrow: 'ba-gallery-prev',
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '50px'
+				}
+			}]
 		});
+
+		var sliderTotal = $slider.slick("getSlick").slideCount,
+				sliderTotalEl = $('.ba-gallery-count__total'),
+				sliderCurEl = $('.ba-gallery-count__current');
+
+		sliderTotalEl.text(sliderTotal);
+
+		$slider.on('afterChange', function(event, slick, currentSlide){
+			sliderCurEl.text(currentSlide + 1);
+		});
+
+		var header = document.querySelector('.ba-header'),
+			scrollTop;
+
+		window.addEventListener('scroll', fixHeader);
+
+		function fixHeader() {
+			scrollTop = window.pageYOffset;
+			console.log(scrollTop);
+
+			if (scrollTop >= 50) {
+				header.classList.add('ba-stick');
+			} else {
+				header.classList.remove('ba-stick');
+			}
+		}
+		fixHeader();
+
 	});
 
 })(jQuery);
